@@ -1,0 +1,14 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #f4f5f7; color: #1f2933; }
+.container { max-width: 720px; margin: 0 auto; padding: 32px 16px; }
+h1 { margin: 0; }
+.subtitle { color: #616e7c; margin-top: 4px; }
+.card { background: #fff; border-radius: 8px; padding: 16px; margin: 16px 0; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+textarea { width: 100%; padding: 10px; border: 1px solid #cbd2d9; border-radius: 6px; font: inherit; resize: vertical; }
+.row { display: flex; gap: 8px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+.btn { border: 0; border-radius: 6px; padding: 8px 16px; font: inherit; cursor: pointer; }
+.btn.primary { background: #326ce5; color: #fff; }
+.btn.secondary { background: #e4e7eb; }
+.note img { max-width: 100%; border-radius: 6px; }
+.note p:first-child { margin-top: 0; }
+.note p:last-child { margin-bottom: 0; }

@@ -1,0 +1,19 @@
+# Solo para probar la app LOCAL: levanta MongoDB y MinIO.
+# La app se corre aparte con:  mvn -Dminio.access.key=mykey -Dminio.secret.key=mysecret spring-boot:run
+#
+# NOTA: MinIO retiró su imagen de Docker Hub (minio/minio ya no existe).
+# Se usa la imagen gratuita y pública de Chainguard.
+services:
+  mongo:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+  minio:
+    image: cgr.dev/chainguard/minio:latest
+    command: server /data
+    user: "0:0"
+    environment:
+      MINIO_ROOT_USER: mykey
+      MINIO_ROOT_PASSWORD: mysecret
+    ports:
+      - "9000:9000"
